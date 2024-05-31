@@ -5,7 +5,7 @@ public class Main {
 		BarberShop shop = new BarberShop(4);       // waiting room have total 4 chair
 
         // Create and start barber thread
-        Thread barberThread = new Thread(shop :: barberWorks);
+        Thread barberThread = new Thread(() -> shop.barberWorks());
         barberThread.start();
 
         // Create and start customer threads
